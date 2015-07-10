@@ -1,0 +1,103 @@
+* {
+	font-family: "Helvetica";
+	text-align: center;
+	margin: 0;
+}
+
+h1 {
+	margin-top: 10px;
+	font-size: 50px;
+}
+
+h2 {
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+h3 {
+	margin-top: 30px;
+	font-size: 20px;
+}
+
+/* 
+Stuck wherever text was living inside 
+div tags because it looked funky 
+*/
+h6 {
+	font-size: inherit;
+}
+
+.maincontent {
+	border-radius: 10px;
+	background-color: rgb(205,205,205);
+	margin: 30px auto;
+	width: 320px;
+	padding: 20px;
+}
+
+.signupbutton {
+	position: relative;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 15px auto;
+	width: 200px;
+}
+
+.logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 28px;
+	border-radius: 5px;
+	/* 
+	Width:
+	font-size +
+	2*padding +
+	2*1px auto text padding
+	*/
+}
+
+.fb {
+	background-color: rgb(55, 101, 163);
+	color: white;
+}
+
+.gplus {
+	background-color: rgb(221, 75, 57);
+	color: white;
+}
+
+.email {
+	border-style: solid;
+	border-width: 1px;
+	color: black;
+}
+
+.loginbutton {
+	position: relative;
+	margin: 20px auto;
+	width: 250px;
+	font-size: 20px;
+}
+
+/* For the half-width underline */
+.loginbutton::before {
+	content: "";
+	position: absolute;
+	left: 25%;
+	bottom: -10px;
+	height: 1px;
+	width: 50%;
+	border-bottom-style: solid;
+	border-width: 2px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: yellow;
+	height: 80px;
+	padding: 20px;
+	font-size: 40px;
+}
