@@ -19,18 +19,51 @@ h3 {
 	font-size: 20px;
 }
 
-/* 
-Stuck wherever text was living inside 
-div tags because it looked funky 
-*/
-h6 {
-	font-size: inherit;
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:active {
+	color: inherit;
+}
+
+input {
+	margin: 10px auto; 
+}
+
+.input {
+	text-align: left;
+	display: block;
+	background-color: transparent;
+	border-style: solid;
+	border-color: black;
+	border-radius: 5px;
+	border-width: 1px;
+	width: 200px;
+	margin: 10px auto; 
+	padding: 5px;
+}
+
+input[type=email] {
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+input[type=submit] {
+	width: 200px;
+	font-size: 30px;
+	padding: 5px;
+	background-color: yellow;
+	border-style: solid;
+	border-color: black;
+	border-radius: 5px;
 }
 
 .maincontent {
 	border-radius: 10px;
 	background-color: rgb(205,205,205);
-	margin: 30px auto;
+	margin: 60px auto;
 	width: 320px;
 	padding: 20px;
 }
