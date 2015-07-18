@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link href="css/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
+    <script src="jquery.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicon-48x48.png" sizes="48x48">
     <title>Daybreak</title>
 </head>
 <body>
@@ -28,8 +33,75 @@
 			<span>Already have an account?</span>
 		</div></a>
 	</div>
-	<div class="footer">
-		<span>Never set another reminder time.</span>
+
+	<div class="divider">
+		<span>Never set another reminder time.</span><br>
+		<span id="learnmore">Learn More</span>
 	</div>
+
+	<div class="imagebanner">
+	 	<img src="img/title.png" alt="Daybreak" style="width: 528px; height: 200px; margin-left:25px;">
+	 	<button id="download" onclick="window.location='https://appsto.re/us/1Ez26.i';">Download</button>
+	</div>
+
+	<div class="info">
+		<div class="topContent">
+			<h4>Never set another reminder time.</h4>
+			<img id="iphone" src="img/daybreak-iphone5.png" alt="Daybreak">
+		</div>
+
+		<div class="features">
+			<ul>
+				<li>
+					<img src="img/landscape.png" alt="">
+					<h2>Smart Reminders</h2>
+					<p>Automatic task scheduling so you never have to set a date again.</p>
+				</li>
+				<li>
+					<img src="img/learning.png" alt="">
+					<h2>Always Learning</h2>
+					<p>Daybreak learns your habits to make informed decisions.</p>
+				</li>
+				<li>
+					<img src="img/sun.png" alt="">
+					<h2>Daily Planner</h2>
+					<p>Streamlined task creation makes planning your day easy.</p>
+				</li>
+				<li>
+					<img src="img/check.png" alt="">
+					<h2>Task manager</h2>
+					<p>Your completed tasks are saved for easy rescheduling.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="footer">
+			<ul>
+				<li><span>© 2015 Thundr, LLC</span></li>
+				<li><a href="mailto:support@daybreak-app.com">Support</a></li>
+				<li><a href="mailto:contact@daybreak-app.com">Contact Us</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+	var resize = function() {
+		var x = $(window).height();
+		var y = x - 120 - 482;
+		if (y > 0) {
+			$('.divider').css({ marginTop: y});
+		}
+	}
+
+	$(window).resize(resize);
+	resize();
+
+	$("#learnmore").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $(".imagebanner").offset().top
+	    }, 200);
+	});
+
+	</script>
 </body>
 </html>

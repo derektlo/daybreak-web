@@ -3,6 +3,10 @@
 <head>
 	<link href="css/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
+    <script src="jquery.js"></script>
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicon-48x48.png" sizes="48x48">
     <title>Signin</title>
 </head>
 <body>
@@ -16,7 +20,7 @@
 			<input type="submit" value="log in">
 		</form>
 	</div>
-	<div class="footer">
+	<div class="divider">
 		<span>Never set another reminder time.</span>
 	</div>
 
@@ -27,6 +31,17 @@
 			// $scope.password = 'Password...';
 			// $scope.repassword = 'Confirm Password...';
 		});
+
+		var resize = function() {
+			var x = $(window).height();
+			var y = x - 120 - 436; // last # is 100 (margin-top) + height of maincontent
+			if (y > 0) {
+				$('.divider').css({ marginTop: y});
+			}
+		}
+
+		$(window).resize(resize);
+		resize();
 	</script>
 </body>
 </html>
