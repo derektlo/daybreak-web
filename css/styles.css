@@ -85,7 +85,7 @@ input[type=submit] {
 
 .maincontent {
 	border-radius: 10px;
-	background-color: rgb(205,205,205);
+	background-color: rgb(255,255,255);
 	/*background-color: yellow;*/
 	margin: 100px auto;
 	width: 320px;
