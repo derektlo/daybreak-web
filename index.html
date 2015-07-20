@@ -1,107 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<link href="css/styles.css" rel="stylesheet">
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
-    <script src="jquery.js"></script>
-    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="img/favicon-48x48.png" sizes="48x48">
     <title>Daybreak</title>
 </head>
 <body>
-	<div class="maincontent"> 
-		<a href="index.html"><h1>Daybreak</h1></a>
-		<h2>smart reminders</h2>
-		<h3>Sign Up</h3>
-		<div class="fb signupbutton">
-			<img src="img/fb-logo.jpg" class="logo">
-			<span>with Facebook</span>
-		</div>
-		<div class="gplus signupbutton">
-			<img src="img/gplus-logo.png" class="logo">
-			<span>with Google+</span>
-		</div>
-		<a href="signup.html">
-		<div class="email signupbutton">
-			<img class="logo">
-			<span>with Email</span>
-		</div></a>
-		<a href="signin.html">
-		<div class="loginbutton">
-			<span>Already have an account?</span>
-		</div></a>
-	</div>
+    <div id="wrapper">
+        <div id="header">
+            <a href="index.html" class="nohover"><h1>Daybreak</h1></a>
+            <h2>Smart Reminders</h2>
+        </div>
+        <div class="maincontent">
+            
+            <div id="buttons"> 
+                <div id="signup" class="btn-main">Sign Up</div>
+                <div class="signin">Sign In</div>
+                <a href="https://appsto.re/us/1Ez26.i" target="blank">
+                    <img src="img/App_Store_Badge.svg" id="app-store-badge">
+                </a>
+            </div>
+            
+            <div id="signin-page">
+                <div id="signin-form" class="transparent">
+                    <h4>Sign In</h4>
+                    <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
+                        <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
+                        <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
+                        <div class="keep-logged-in">
+                            <input type="checkbox" name="persist" class="check"><div id="keep-logged-in-div">Keep me logged in</div>
+                        </div>
+                        <input type="submit" class="btn-main" value="Log In">
+                    </form>
+                </div>
+                <div class="social transparent">
+                    <h4>Or connect with:</h4>
+                    <div class="fb btn-social-connect">
+                        <img src="img/fb-icon-sq.png" class="logo">
+                        <span>Facebook</span>
+                    </div>
+                    <div class="gplus btn-social-connect">
+                        <img src="img/gplus-icon-sq.png" class="logo">
+                        <span>Google</span>
+                    </div>
+                </div>
+                <span class="small-text">Don't have an account? <a>Sign Up</a></span>
+            </div>
 
-	<div class="divider">
-		<span>Never set another reminder time.</span><br>
-		<span id="learnmore">Learn More</span>
-	</div>
+            <div id="signup-page">
+                <div id="signup-form" class="transparent">
+                    <h4>Sign up with Email</h4>
+                    <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
+                        <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
+                        <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
+                        <input class="input" ng-model="name" placeholder="some other stuff">
+                        <input type="submit" class="btn-main" value="Done">
+                    </form>
+                </div>
 
-	<div class="imagebanner">
-	 	<img src="img/title.png" alt="Daybreak" style="width: 528px; height: 200px; margin-left:25px;">
-	 	<button id="download" onclick="window.location='https://appsto.re/us/1Ez26.i';">Download</button>
-	</div>
+                <div class="social transparent">
+                    <h4>Or connect with:</h4>
+                    <div class="fb btn-social-connect">
+                        <img src="img/fb-icon-sq.png" class="logo">
+                        <span>Facebook</span>
+                    </div>
+                    <div class="gplus btn-social-connect">
+                        <img src="img/gplus-icon-sq.png" class="logo">
+                        <span>Google</span>
+                    </div>
+                </div>
+                <span class="small-text">Already have an account? <a>Sign In</a></span>
+            </div>
+        </div>
 
-	<div class="info">
-		<div class="topContent">
-			<h4>Never set another reminder time.</h4>
-			<img id="iphone" src="img/daybreak-iphone5.png" alt="Daybreak">
-		</div>
+        <div id="divider">
+            <h5>Never set another reminder time.</h5>
+            <span id="learnmore">Learn More &#x25BC; </span>
+        </div>
+    </div>
 
-		<div class="features">
-			<ul>
-				<li>
-					<img src="img/landscape.png" alt="">
-					<h2>Smart Reminders</h2>
-					<p>Automatic task scheduling so you never have to set a date again.</p>
-				</li>
-				<li>
-					<img src="img/learning.png" alt="">
-					<h2>Always Learning</h2>
-					<p>Daybreak learns your habits to make informed decisions.</p>
-				</li>
-				<li>
-					<img src="img/sun.png" alt="">
-					<h2>Daily Planner</h2>
-					<p>Streamlined task creation makes planning your day easy.</p>
-				</li>
-				<li>
-					<img src="img/check.png" alt="">
-					<h2>Task manager</h2>
-					<p>Your completed tasks are saved for easy rescheduling.</p>
-				</li>
-			</ul>
-		</div>
-
-		<div class="footer">
-			<ul>
-				<li><span>© 2015 Thundr, LLC</span></li>
-				<li><a href="mailto:support@daybreak-app.com">Support</a></li>
-				<li><a href="mailto:contact@daybreak-app.com">Contact Us</a></li>
-			</ul>
-		</div>
-	</div>
-
-	<script>
-	var resize = function() {
-		var x = $(window).height();
-		var y = x - 120 - 482;
-		if (y > 0) {
-			$('.divider').css({ marginTop: y});
-		}
-	}
-
-	$(window).resize(resize);
-	resize();
-
-	$("#learnmore").click(function() {
-	    $('html, body').animate({
-	        scrollTop: $(".imagebanner").offset().top
-	    }, 200);
-	});
-
-	</script>
+        <div id="more-info" class="transparent">
+            <img id="iphone" src="img/daybreak-iphone5.png" alt="Daybreak">
+            <div id="features">
+                <span class="secondary-title">Features</span>
+                <ul>
+                    <li>
+                    <div class="features-title">
+                        <img src="img/landscape_w.png" alt="" class="icon-small">
+                        <h2>Smart Reminders</h2>
+                        </div>
+                        <p>Automatic task scheduling so you never have to set a date again.</p>
+                    </li>
+                    <li>
+                    <div class="features-title">
+                        <img src="img/learning_w.png" alt="" class="icon-small">
+                        <h2>Always Learning</h2>
+                        </div>
+                        <p>Daybreak learns your habits to make informed decisions.</p>
+                    </li>
+                    <li>
+                    <div class="features-title">
+                        <img src="img/sun_w.png" alt="" class="icon-small">
+                        <h2>Daily Planner</h2>
+                        </div>
+                        <p>Streamlined task creation makes planning your day easy.</p>
+                    </li>
+                    <li>
+                    <div class="features-title">
+                        <img src="img/check_w.png" alt="" class="icon-small">
+                        <h2>Task manager</h2>
+                        </div>
+                        <p>Your completed tasks are saved for easy rescheduling.</p>
+                    </li>
+                </ul>
+            </div>
+             <div class="footer">
+                <ul>
+                    <li><span>&#169; 2015 Thundr, LLC</span></li>
+                    <li><a href="mailto:support@daybreak-app.com">Support</a></li>
+                    <li><a href="mailto:contact@daybreak-app.com">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
 </body>
 </html>
