@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="scripts/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="node_modules/angular/angular.js"></script>
+    <title>My Daybreak</title>
+</head>
+<body>
+	<div class="sidebar">
+		<table class="quickview">
+			<tr>
+				<td></td>
+				<td><img src="img/sun.png"></td>
+				<td><img src="img/sun.png"></td>
+				<td><img src="img/sun.png"></td>
+			</tr>
+			
+			<tr>
+				<td>Today</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+				
+			<tr>
+				<td>Tomorrow</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+		</table>
+		<ul class="selector">
+		<li>
+			<img src="img/sun.png">
+			<span>Reminders</span>
+		</li>
+		<li>
+			<img src="img/sun.png">
+			<span>Completed</span>
+		</li>
+		<li>
+			<img src="img/sun.png">
+			<span>Schedule</span>
+		</li>
+		<li>
+			<img src="img/sun.png">
+			<span>Settings</span>
+		</li>
+		</ul>
+	</div>
+	<div class="main reminders">
+		<span>Reminders</span>
+	</div>
+	<div class="main schedule">
+		<span>Schedule</span>
+	</div>
+	<div class="main completed">
+		<span>Completed</span>
+	</div>
+	<div class="main settings">
+		<span>Settings</span>
+	</div>
+
+
+	<script>
+		$( document ).ready(function() {
+			$(".reminders").show();
+			$(".schedule").hide();
+			$(".completed").hide();
+			$(".settings").hide();
+
+			$( "span" ).click(function( event ) {
+	        	if ($(this).parent().parent().attr("class") == "selector") {
+		            var txt = $(this).text().toLowerCase();
+		            $(".main").hide();
+		            $("." + txt).show();
+	        	}
+	        });
+		});
+	</script>
+</body>
+</html>
