@@ -409,7 +409,7 @@ input[type=checkbox]:checked {
 .selector li {
 	text-align: left;
 	cursor: pointer;
-	/*height: 40px;*/
+	height: 40px;
 }
 
 .selector li img {
