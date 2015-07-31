@@ -2,23 +2,43 @@
 <html>
 <head>
 	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/styles-signin.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
-    <title>Signin</title>
+    <title>Daybreak | Sign In</title>
 </head>
 <body>
-	<div class="maincontent"> 
-		<a href="index.html"><h1>Daybreak</h1></a>
-		<h2>smart reminders</h2>
-		<form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
-			<input class="input" type="email"    ng-model="email"      name="email" placeholder="Email...">
-			<input class="input" type="password" ng-model="password"   name="password" placeholder="Password...">
-			<input type="checkbox" name="persist"><span> Keep me logged in</span><br>
-			<input type="submit" value="log in">
-		</form>
-	</div>
-	<div class="footer">
-		<span>Never set another reminder time.</span>
-	</div>
+	<div id="signin-content">
+        <div id="daybreak-icon" class="card">
+        	<a href="index.html">
+        		<img src="img/daybreak-icon-b.png">
+        	</a>
+        </div>
+    <div id="signin-form" class="card">
+        <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
+            <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
+            <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
+<!--             <div class="check-box">
+                <input type="checkbox" name="persist" class="check"><span id="keep-logged-in">Keep me logged in</span>
+            </div> -->
+            <input type="submit" class="btn btn-social-connect login" value="Sign In">
+                
+                <span class="small-text"><a href="signup.html">Forgot Your Password?</a></span>
+        </form>
+        <div id="separator"></div>
+<!--     </div>
+    <div class="social card"> -->
+        <!-- <h4>Or connect with:</h4> -->
+        <div class="fb btn-social-connect">
+            <img src="img/fb-logo.jpg" class="logo">
+            <span class="btn-social-text">Facebook</span>
+        </div>
+        <div class="gplus btn-social-connect">
+            <img src="img/gplus-logo.png" class="logo">
+            <span class="btn-social-text">Google</span>
+        </div>
+    </div>
+    <span class="small-text">Don't have an account? <a href="signup.html">Sign Up</a></span>
+   	</div>
 
 	<script>
 		var app = angular.module('myApp', []);

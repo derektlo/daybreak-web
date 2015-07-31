@@ -10,106 +10,63 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <a href="index.html" class="nohover"><h1>Daybreak</h1></a>
-            <h2>Smart Reminders</h2>
+            <a href="index.html" class="nohover">
+            <img src="img/daybreak-logo-w.png" alt="Daybreak" id="header-logo">
+            </a>
+            <!-- <h1>Daybreak</h1></a>
+            <h2>Smart Reminders</h2> -->
+            <a href="signup.html">
+                <div class="btn signup">Create a Free Account</div>
+            </a>
+            <a href="signin.html">
+                <div class="btn signin">Sign In</div>
+            </a>
         </div>
         <div class="maincontent">
-            
+            <h1>Smart Reminders</h1>
             <div id="buttons"> 
-                <div id="signup" class="btn-main">Sign Up</div>
-                <div class="signin">Sign In</div>
                 <a href="https://appsto.re/us/1Ez26.i" target="blank">
-                    <img src="img/App_Store_Badge.svg" id="app-store-badge">
                 </a>
-            </div>
-            
-            <div id="signin-page">
-                <div id="signin-form" class="transparent">
-                    <h4>Sign In</h4>
-                    <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
-                        <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
-                        <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
-                        <div class="keep-logged-in">
-                            <input type="checkbox" name="persist" class="check"><div id="keep-logged-in-div">Keep me logged in</div>
-                        </div>
-                        <input type="submit" class="btn-main" value="Log In">
-                    </form>
-                </div>
-                <div class="social transparent">
-                    <h4>Or connect with:</h4>
-                    <div class="fb btn-social-connect">
-                        <img src="img/fb-icon-sq.png" class="logo">
-                        <span>Facebook</span>
-                    </div>
-                    <div class="gplus btn-social-connect">
-                        <img src="img/gplus-icon-sq.png" class="logo">
-                        <span>Google</span>
-                    </div>
-                </div>
-                <span class="small-text">Don't have an account? <a>Sign Up</a></span>
-            </div>
+            <img id="iphone" src="img/daybreak-iphone5.png" alt="Daybreak">
 
-            <div id="signup-page">
-                <div id="signup-form" class="transparent">
-                    <h4>Sign up with Email</h4>
-                    <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
-                        <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
-                        <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
-                        <input class="input" ng-model="name" placeholder="some other stuff">
-                        <input type="submit" class="btn-main" value="Done">
-                    </form>
-                </div>
-
-                <div class="social transparent">
-                    <h4>Or connect with:</h4>
-                    <div class="fb btn-social-connect">
-                        <img src="img/fb-icon-sq.png" class="logo">
-                        <span>Facebook</span>
-                    </div>
-                    <div class="gplus btn-social-connect">
-                        <img src="img/gplus-icon-sq.png" class="logo">
-                        <span>Google</span>
-                    </div>
-                </div>
-                <span class="small-text">Already have an account? <a>Sign In</a></span>
             </div>
         </div>
 
         <div id="divider">
-            <h5>Never set another reminder time.</h5>
-            <span id="learnmore">Learn More &#x25BC; </span>
+           <!--  <h5>Never set another reminder time.</h5> -->
+            <img src="img/App_Store_Badge.svg" id="app-store-badge">
+            <span id="learnmore">Learn More&nbsp;&nbsp;&#x25BC; </span>
         </div>
     </div>
 
         <div id="more-info" class="transparent">
-            <img id="iphone" src="img/daybreak-iphone5.png" alt="Daybreak">
             <div id="features">
                 <span class="secondary-title">Features</span>
                 <ul>
                     <li>
                     <div class="features-title">
-                        <img src="img/landscape_w.png" alt="" class="icon-small">
+                        <img src="img/landscape.png" alt="" class="icon-small">
                         <h2>Smart Reminders</h2>
                         </div>
                         <p>Automatic task scheduling so you never have to set a date again.</p>
                     </li>
                     <li>
                     <div class="features-title">
-                        <img src="img/learning_w.png" alt="" class="icon-small">
+                        <img src="img/learning.png" alt="" class="icon-small">
                         <h2>Always Learning</h2>
                         </div>
                         <p>Daybreak learns your habits to make informed decisions.</p>
                     </li>
                     <li>
                     <div class="features-title">
-                        <img src="img/sun_w.png" alt="" class="icon-small">
+                        <img src="img/sun.png" alt="" class="icon-small">
                         <h2>Daily Planner</h2>
                         </div>
                         <p>Streamlined task creation makes planning your day easy.</p>
                     </li>
                     <li>
                     <div class="features-title">
-                        <img src="img/check_w.png" alt="" class="icon-small">
+                        <img src="img/check.png" alt="" class="icon-small">
                         <h2>Task manager</h2>
                         </div>
                         <p>Your completed tasks are saved for easy rescheduling.</p>
