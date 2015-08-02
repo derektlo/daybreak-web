@@ -6,9 +6,9 @@
    */
 
 * {
-	font-family: "Avenir";
-	text-align: center;
-	margin: 0;
+    font-family: "Avenir";
+    text-align: center;
+    margin: 0;
     padding: 0;
 }
 
@@ -16,12 +16,12 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-	color: #242424;
-	background: url(../img/mtns-2.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    color: #242424;
+    background: url(../img/mtns-2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
@@ -33,7 +33,7 @@ h1 {
     font-weight: normal;
     color: #fff;
     letter-spacing: 1px;
-	font-size: 60px;
+    font-size: 60px;
     border-bottom: 3px solid #fff;
 }
  #header-logo {
@@ -54,19 +54,19 @@ h1 {
 }
 
 h2 {
-	line-height: 8px;
-	font-weight: normal;
-	text-align: right;
-	padding-right: 46px;
-	margin-top: 0px;
-	font-size: 18px;
+    line-height: 8px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 46px;
+    margin-top: 0px;
+    font-size: 18px;
 }
 
 h3 {
-	position: absolute;
-	font-weight: normal;
-	margin-top: 30px;
-	font-size: 25px;
+    position: absolute;
+    font-weight: normal;
+    margin-top: 30px;
+    font-size: 25px;
 }
 
 h4 {
@@ -83,16 +83,16 @@ h5 {
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #FFDD28;
+    color: #000;
 }
 
 a:active {
-	color: inherit;
+    color: inherit;
 }
 
 a.nohover:hover {
@@ -121,14 +121,12 @@ a.nohover:hover {
     position: relative;
 }
 
-
-
 #app-store-badge {
     padding-top: 8px;
 }
 
 .btn {
-	background: transparent;
+    background: transparent;
     color: #777;
     font-size: 15px;
     padding: 10px;
@@ -141,13 +139,27 @@ a.nohover:hover {
 }
 
 .btn:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .signup {
     float: right;
     background-color: #FFF;
 }
+
+.download {
+    background-color: #FFDD28;
+    width: 200px;
+    margin: auto;
+    margin-top: -13px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px #CCC;
+}
+
+.download:hover {
+    box-shadow: 2px 2px 2px #CCC;
+}
+
 .signup:hover {
     background: #FFDD28;
     color: #fff;
@@ -158,8 +170,7 @@ a.nohover:hover {
     background: transparent;
     float: right;
 }
-.signin:hover {
-}
+
 .login {
     border: none;
     border-radius: 3px;
@@ -167,7 +178,7 @@ a.nohover:hover {
     margin: 15px auto;
     width: 100%;
     background-color: #FFDD28;
-    box-shadow: 1px 1px 1px #888888;
+    box-shadow: 1px 1px 1px #CCC;
 }
 .transparent {
     background-color: #FFF;
@@ -199,20 +210,24 @@ a.nohover:hover {
 .btn-social-text {
     padding-left: 20px;
 }
+
 input {
     margin: 20px auto; 
 }
+
 .check-box {
     height: 40px;
     float: left;
     padding-left: 5px;
 
 }
+
 #keep-logged-in {
     padding-left: 20px;
     font-size: 12px;
     color: #777;
 }
+
 .input {
     outline: 0;
     color: #242424;
@@ -227,7 +242,6 @@ input {
     padding: 5px;
     padding-right: 0px;
     padding-left: 0px;
-
     margin-top: 15px;
 }
 
@@ -239,8 +253,6 @@ input {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 30px;
-    /*border: 3px solid #242424;
-    border-radius: 5px;*/
 }
 
 input[type=submit] {
@@ -256,23 +268,23 @@ input[type=submit] {
 }
 
 .logo {
-	position: absolute;
+    position: absolute;
     border-radius: 3px;
-	left: 0;
-	top: 0;
-	height: 30px;
+    left: 0;
+    top: 0;
+    height: 30px;
 }
 
 .fb {
-	background-color: #3765a3;   
-	color: white;
+    background-color: #3765a3;   
+    color: white;
     width: 120px;
     float: left;
 }
 
 .gplus {
-	background-color: #dd4b39;
-	color: white;
+    background-color: #dd4b39;
+    color: white;
     width: 120px;
     float: right;
 }
@@ -302,7 +314,7 @@ input[type=submit] {
 #more-info {
     position: relative;
     bottom: 0;
-    height: 100%;
+    height: 1860px;
     width: 100%;
 }
 
@@ -317,74 +329,116 @@ input[type=submit] {
 }
 
 #features {
-    padding-top: 70px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+#features ul {
+    list-style-type: none;
+    width: 90%;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    top: -66px;
+    margin: 0;
+}
+
+#features li {
+    height: 400px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #DDD;
+
+}
+
+#features p {
+    width: 300px;
+    display: block;
+    font-size: 20px;
+    color: #777;
+    margin-top: 25px;
+    text-align: left;
+    padding-left: 80px;
+}
+
+#features h2 {
+    line-height: 75px;
+    font-size: 40px;
+    color: #555;
+    float: left;
+}
+
+.features-copy {
+    padding-left: 5%;
+}
+
+.features-title{
+    width: 550px;
+    height: 80px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    text-align: left;
+    border-bottom: 2px solid #FFDD28;
+}
+
+.screenshot-container {
+    background-color: #555;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    height: 400px;
+    width: 450px;
+}
+
+.align-left {
+    position: relative;
+    top: 0px;
+    left: -4%;
+    display: inline-block;
+}
+
+.align-right {
+    float: right;
+    padding-right: 5%;
+    padding-left: 0;
+
+}
+
+#screen1 {
+    background: url(../img/daybreak-iphone5.png) no-repeat center;  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.footer {
+    position: absolute;
+    color: #777;
+    bottom: 15px;
+    width: 100%;
+    height:20px;
+    font-size: 12px;
+    padding-top: 15px;
+    border-top: 1px solid #CCC;
 }
 
 .footer ul {
-	list-style-type: none;
+    list-style-type: none;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 .footer li {
-	display: inline-block;
+    display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
-}
 
-#features ul {
-	list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding-bottom: 0;
-    padding-left: 3%;
-    padding-right: 320px;
-    padding-top: 40px;
 }
-
-#features li {
-	display: inline-block;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 20px;
-    width: 270px;
-}
-
-#features li img {
-    width: 40px;
-    height: 40px;
-}
-
-#features li p {
-    clear: both;
-    margin-top: 5px;
-    text-align: left;
-}
-#features li h2 {
-    line-height: 42px;
-    height: 100%;
-    float: left;
-}
-.features-title{
-    width: 100%;
-    height: 30px;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    text-align: left;
-    border-bottom: 2px solid #FFDD28;
-}
-
-.footer {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    height:20px;
-    font-size: 12px;
-}
-
 .icon-small {
     display: inline;
+    width: 70px;
+    height: 70px;
     float: left;
     padding-bottom: 12px;
     margin-right: 8px;
@@ -413,58 +467,63 @@ input[type=submit] {
     padding: 30px;
     border-radius: 5px;
 }
-
-
+/* - - - - - - - - - - - - - - */
+/*          Sign Up            */
+#signup-form{
+    padding-top: 10px;
+    height: 290px;
+    margin-bottom: 15px;
+}
 /* - - - - - - - - - - - - - - */
 
 .sidebar {
-	float: left;
-	width: 20%;
-	height: 600px;
-	background-color: blue;
+    float: left;
+    width: 20%;
+    height: 600px;
+    background-color: blue;
 }
 
 .selector {
-	margin-top: 50px;
-	list-style-type: none;
+    margin-top: 50px;
+    list-style-type: none;
 }
 
 .selector li {
-	text-align: left;
-	cursor: pointer;
-	height: 40px;
+    text-align: left;
+    cursor: pointer;
+    height: 40px;
 }
 
 .selector li img {
-	width: 40px;
-	height: 40px;
-	float: left;
+    width: 40px;
+    height: 40px;
+    float: left;
 }
 
 .selector li span {
-	display: inline-block;
-	font-size: 20px;
-	padding: 6px;
-	margin: 0;
+    display: inline-block;
+    font-size: 20px;
+    padding: 6px;
+    margin: 0;
 }
 
 .quickview tr td {
-	padding: 5px;
+    padding: 5px;
 }
 
 .quickview tr td:first-child {
-	text-align: left;
+    text-align: left;
 }
 
 .quickview tr td img {
-	float: left;
-	width: 26px;
+    float: left;
+    width: 26px;
 }
 
 .main {
-	width: 80%;
-	height: 600px;
-	background-color: black;
-	float: left;
+    width: 80%;
+    height: 600px;
+    background-color: black;
+    float: left;
 }
 
