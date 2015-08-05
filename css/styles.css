@@ -291,12 +291,14 @@ input[type=submit] {
 
 #divider {
     position: absolute;
-    bottom: -4px;
+    bottom: -1px;
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    border-bottom: 4px solid #242424;
+    border-bottom: 1px solid #BBB;
+    box-shadow: 1px 1px 5px #CCC;
+
     z-index: 1000;
 }
 
@@ -347,7 +349,6 @@ input[type=submit] {
     height: 400px;
     padding-bottom: 0px;
     border-bottom: 2px solid #DDD;
-
 }
 
 #features p {
