@@ -5,66 +5,81 @@
 	<script src="scripts/jquery.min.js"></script>
     <link href="css/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
     <title>My Daybreak</title>
 </head>
 <body>
-	<div class="sidebar">
-		<table class="quickview">
-			<tr>
-				<td></td>
-				<td><img src="img/sun.png"></td>
-				<td><img src="img/sun.png"></td>
-				<td><img src="img/sun.png"></td>
-			</tr>
-			
-			<tr>
-				<td>Today</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
+	<div ng-App="App">
+		<div class="sidebar">
+			<table class="quickview">
+				<tr>
+					<td><img src="img/sun.png"></td>
+					<td><img src="img/sun.png"></td>
+					<td><img src="img/sun.png"></td>
+				</tr>
 				
-			<tr>
-				<td>Tomorrow</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-		</table>
-		<ul class="selector">
-		<li>
-			<img src="img/sun.png">
-			<span>Reminders</span>
-		</li>
-		<li>
-			<img src="img/sun.png">
-			<span>Completed</span>
-		</li>
-		<li>
-			<img src="img/sun.png">
+				<tr>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+					
+				<tr>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+			</table>
+			<ul class="selector">
+			<li>
+				<img src="img/sun.png">
+				<span>Reminders</span>
+			</li>
+			<li>
+				<img src="img/sun.png">
+				<span>Completed</span>
+			</li>
+			<li>
+				<img src="img/sun.png">
+				<span>Schedule</span>
+			</li>
+			<li>
+				<img src="img/sun.png">
+				<span>Settings</span>
+			</li>
+			</ul>
+			<button ng-click="logOut()">Log Out</button>
+		</div>
+		<div class="main reminders">
+			<span>Reminders</span><br>
+			<span>Welcome, {{ currentUser.get('username') }}</span>
+		</div>
+		<div class="main schedule">
 			<span>Schedule</span>
-		</li>
-		<li>
-			<img src="img/sun.png">
+		</div>
+		<div class="main completed">
+			<span>Completed</span>
+		</div>
+		<div class="main settings">
 			<span>Settings</span>
-		</li>
-		</ul>
-	</div>
-	<div class="main reminders">
-		<span>Reminders</span>
-	</div>
-	<div class="main schedule">
-		<span>Schedule</span>
-	</div>
-	<div class="main completed">
-		<span>Completed</span>
-	</div>
-	<div class="main settings">
-		<span>Settings</span>
+		</div>
 	</div>
 
 
 	<script>
+		Parse.initialize("3xrH0rpnG3FhqNYhTkHR3imuM05EWCliFgD03xef","ZG3ovvLeJqBuRT4H9HMT3kyTPjjFBZzNXQYuVfbE");
+
+		var app = angular.module('App', []);
+		app.run(['$rootScope',function($scope) {
+			$scope.currentUser = Parse.User.current();
+
+			$scope.logOut = function() {
+				Parse.User.logOut();
+    			$scope.currentUser = null;
+    			window.location.href = "index.html";
+			}
+		}]);
+
 		$( document ).ready(function() {
 			$(".reminders").show();
 			$(".schedule").hide();

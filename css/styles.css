@@ -512,10 +512,6 @@ input[type=submit] {
     padding: 5px;
 }
 
-.quickview tr td:first-child {
-    text-align: left;
-}
-
 .quickview tr td img {
     float: left;
     width: 26px;
@@ -524,7 +520,7 @@ input[type=submit] {
 .main {
     width: 80%;
     height: 600px;
-    background-color: black;
+    background-color: gray;
     float: left;
 }
 
