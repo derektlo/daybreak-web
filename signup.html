@@ -4,6 +4,7 @@
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/styles-signin.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
     <title>Daybreak | Sign Up</title>
 </head>
 <body>
@@ -16,11 +17,11 @@
         </div>
 	    <div id="signup-form" class="card">
             <form ng-app="myApp" ng-controller="formCtrl" name="form2" nonvalidate>
-                <input class="input" type="name" ng-model="name" name="name" placeholder="Name...">
-                <input class="input" type="email" ng-model="email" name="email" placeholder="Email...">
-                <input class="input" type="password" ng-model="password" name="password" placeholder="Password...">
+                <input class="input" type="name" ng-model="user.name" name="name" placeholder="Name...">
+                <input class="input" type="email" ng-model="user.email" name="email" placeholder="Email...">
+                <input class="input" type="password" ng-model="user.password" name="password" placeholder="Password...">
                 <input class="input" ng-model="other" placeholder="some other stuff">
-                <input type="submit" class="btn-main" value="Done">
+                <input type="submit" ng-click="signUp(user)" class="btn-main" value="Done">
             </form>
 	        <div id="separator"></div>
 	        <div class="fb btn-social-connect">
@@ -32,11 +33,13 @@
 	            <span class="btn-social-text">Google</span>
 	        </div>
 	    </div>
-    <span class="small-text">Don't have an account? <a href="signup.html">Sign Up</a></span>
+    <!-- <span class="small-text">Don't have an account? <a href="signup.html">Sign Up</a></span> -->
    	</div>
 
 
 	<script>
+		Parse.initialize("3xrH0rpnG3FhqNYhTkHR3imuM05EWCliFgD03xef","ZG3ovvLeJqBuRT4H9HMT3kyTPjjFBZzNXQYuVfbE");
+
 		var app = angular.module('myApp', []);
 		app.controller('formCtrl', function($scope) {
 			$scope.passmatch = function () {
@@ -45,6 +48,34 @@
 						($scope.form.password.$dirty == true));
 			}
 		});
+
+		app.run(['$rootScope',function($scope) {
+			$scope.currentUser = Parse.User.current();
+
+			if ($scope.currentUser) {
+				window.location.href = "app.html";
+			}
+
+			$scope.signUp = function(form) {
+				var user = new Parse.User();
+				user.set("email", form.email);
+    			user.set("username", form.name);
+    			user.set("password", form.password);
+
+    			user.signUp(null, {
+			    	success: function(user) {
+			        	$scope.currentUser = user;
+			        	$scope.$apply();
+			        	window.location.href = "app.html";
+			    	},
+			    	error: function(user, error) {
+			        	alert("Unable to sign up:  " + error.code + " " + error.message);
+			    	}
+			    });  
+			};
+			// console.log($scope.currentUser);
+		}]);
+
 	</script>
 </body>
 </html>
