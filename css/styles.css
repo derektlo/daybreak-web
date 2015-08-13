@@ -296,7 +296,7 @@ input[type=submit] {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
-    border-bottom: 1px solid #BBB;
+    border-bottom: 1px solid #DDD;
     box-shadow: 1px 1px 5px #CCC;
 
     z-index: 1000;
@@ -341,14 +341,14 @@ input[type=submit] {
     position: relative;
     padding-left: 5%;
     padding-right: 5%;
-    top: -66px;
+    top: -70px;
     margin: 0;
 }
 
 #features li {
     height: 400px;
     padding-bottom: 0px;
-    border-bottom: 2px solid #DDD;
+    border-bottom: 1px solid #DDD;
 }
 
 #features p {
@@ -481,7 +481,7 @@ input[type=submit] {
     float: left;
     width: 20%;
     height: 600px;
-    background-color: blue;
+    background-color: #DDD;
 }
 
 .selector {
@@ -508,6 +508,14 @@ input[type=submit] {
     margin: 0;
 }
 
+.quickview {
+    padding: 20px;
+}
+
+.selector {
+    padding-left: 20px;
+}
+
 .quickview tr td {
     padding: 5px;
 }
@@ -515,6 +523,34 @@ input[type=submit] {
 .quickview tr td img {
     float: left;
     width: 26px;
+}
+
+
+.reminder {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 40px;
+    background-color: #DDD;
+}
+
+.reminder ul {
+    list-style-type: none;
+}
+.reminder ul li {
+    float: left;
+}
+
+.reminder-info {
+    display: block;
+    padding-top: 9px;
+}
+
+.reminder-checkbox {
+    width: 30px;
+    padding-left: 7px;
+    padding-top: 4px;
+    margin-right: 10px;
 }
 
 .main {

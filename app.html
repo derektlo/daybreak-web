@@ -6,6 +6,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <script src="node_modules/angular/angular.js"></script>
     <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+    <link href="css/app.css" rel="stylesheet">
     <title>My Daybreak</title>
 </head>
 <body>
@@ -53,6 +54,16 @@
 		<div class="main reminders">
 			<span>Reminders</span><br>
 			<span>Welcome, {{ currentUser.get('username') }}</span>
+			<div class="reminder">
+				<ul class="reminder-content">
+					<li>
+						<img src="img/check.png" class="reminder-checkbox">
+					</li>
+					<li>
+						<span class="reminder-info">Your reminder here</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="main schedule">
 			<span>Schedule</span>
