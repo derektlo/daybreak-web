@@ -54,6 +54,14 @@
 		<div class="main reminders">
 			<span>Reminders</span><br>
 			<span>Welcome, {{ currentUser.get('username') }}</span>
+			<div class="new-reminder">
+            	<input class="input new-reminder-name" type="reminder" ng-model="reminder" name="" placeholder="New Reminder">
+            	<ul class="time-suggestions">
+            		<li>Morning</li>
+            		<li>Afternoon</li>
+            		<li>Lunch</li>            		
+            	</ul>
+            </div>
 			<div class="reminder">
 				<ul class="reminder-content">
 					<li>

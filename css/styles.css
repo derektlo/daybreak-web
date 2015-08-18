@@ -219,7 +219,6 @@ input {
     height: 40px;
     float: left;
     padding-left: 5px;
-
 }
 
 #keep-logged-in {
@@ -525,6 +524,34 @@ input[type=submit] {
     width: 26px;
 }
 
+.new-reminder {
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 100px;
+    background-color: #DDD;
+}
+
+.new-reminder-name {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+ul.time-suggestions {
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+    cursor: pointer;
+}
+
+ul.time-suggestions li {
+    float: left;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
 
 .reminder {
     margin: auto;
@@ -532,6 +559,7 @@ input[type=submit] {
     width: 90%;
     height: 40px;
     background-color: #DDD;
+    padding: 10px;
 }
 
 .reminder ul {
